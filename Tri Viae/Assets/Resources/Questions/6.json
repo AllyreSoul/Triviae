@@ -1,25 +1,25 @@
 {
     "theme":"Umum",
-    "themeid":"1",
-    "title":"Mata uang Jepang adalah?",
+    "themeid":"0",
+    "title":"Penemu telepon adalah ?",
     "correct":1,
     "fourPick":true,
     "answers":
         [
             {
-                "text":"Yen",
+                "text":"Alexander Graham Bell",
                 "id":1
             },
             {
-                "text":"Baht",
+                "text":"Michael Faraday",
                 "id":2
             },
             {
-                "text":"Peso",
+                "text":"Gottlieb Daimler",
                 "id":3
             },
             {
-                "text":"Real",
+                "text":"Issac Newton",
                 "id":4
             }
         ]

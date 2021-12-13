@@ -1,25 +1,25 @@
 {
     "theme":"Umum",
-    "themeid":"1",
-    "title":"Mata uang Jepang adalah?",
-    "correct":1,
+    "themeid":"0",
+    "title":"Pusat tata surya adalah....",
+    "correct":3,
     "fourPick":true,
     "answers":
         [
             {
-                "text":"Yen",
+                "text":"Bulan",
                 "id":1
             },
             {
-                "text":"Baht",
+                "text":"Bumi",
                 "id":2
             },
             {
-                "text":"Peso",
+                "text":"Matahari",
                 "id":3
             },
             {
-                "text":"Real",
+                "text":"Meteor",
                 "id":4
             }
         ]

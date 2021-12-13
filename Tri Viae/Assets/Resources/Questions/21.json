@@ -1,25 +1,25 @@
 {
     "theme":"Umum",
-    "themeid":"1",
-    "title":"Mata uang Jepang adalah?",
+    "themeid":"0",
+    "title":"Di mana letak astronomis Indonesia?",
     "correct":1,
     "fourPick":true,
     "answers":
         [
             {
-                "text":"Yen",
+                "text":"6°LU-11°LS dan 95°BT-141°BT",
                 "id":1
             },
             {
-                "text":"Baht",
+                "text":"7°LU-19°LS dan 90°BT-143°BT",
                 "id":2
             },
             {
-                "text":"Peso",
+                "text":"6°LU-11°LS dan 96°BT-149°BT",
                 "id":3
             },
             {
-                "text":"Real",
+                "text":"6°LU-12°LS dan 100°BT-141°BT",
                 "id":4
             }
         ]

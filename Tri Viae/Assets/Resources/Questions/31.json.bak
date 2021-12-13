@@ -1,25 +1,25 @@
 {
     "theme":"Umum",
-    "themeid":"1",
-    "title":"Mata uang Jepang adalah?",
+    "themeid":"0",
+    "title":"Jenis kumbang terbesar adalah kumbang….",
     "correct":1,
     "fourPick":true,
     "answers":
         [
             {
-                "text":"Yen",
+                "text":"kumbang goliath",
                 "id":1
             },
             {
-                "text":"Baht",
+                "text":"kumbang koksi",
                 "id":2
             },
             {
-                "text":"Peso",
+                "text":"kumbang tawon",
                 "id":3
             },
             {
-                "text":"Real",
+                "text":"kumbang tanah ",
                 "id":4
             }
         ]

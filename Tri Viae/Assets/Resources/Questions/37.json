@@ -1,25 +1,25 @@
 {
     "theme":"Umum",
     "themeid":"0",
-    "title":"Alat pernapasan belalang adalah?",
-    "correct":1,
+    "title":"Satpol PP adalah singkatan dari…",
+    "correct":2,
     "fourPick":true,
     "answers":
         [
             {
-                "text":"Trakea",
+                "text":"Satpam Polisi Pantang Pulang",
                 "id":1
             },
             {
-                "text":"Insang",
+                "text":"Satuan Polisi Pamong Praja",
                 "id":2
             },
             {
-                "text":"Kulit",
+                "text":"Satuan Polisi Polwan Peduli",
                 "id":3
             },
             {
-                "text":"Paru - Paru",
+                "text":"Satpam Polisi Pelindung Pulau",
                 "id":4
             }
         ]

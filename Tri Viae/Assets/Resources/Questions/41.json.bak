@@ -1,25 +1,25 @@
 {
     "theme":"Umum",
-    "themeid":"1",
-    "title":"Mata uang Jepang adalah?",
-    "correct":1,
+    "themeid":"0",
+    "title":"Negara termiskin di dunia adalah…",
+    "correct":2,
     "fourPick":true,
     "answers":
         [
             {
-                "text":"Yen",
+                "text":"Indonesia",
                 "id":1
             },
             {
-                "text":"Baht",
+                "text":"template",
                 "id":2
             },
             {
-                "text":"Peso",
+                "text":"template",
                 "id":3
             },
             {
-                "text":"Real",
+                "text":"template",
                 "id":4
             }
         ]

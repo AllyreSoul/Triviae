@@ -1,25 +1,25 @@
 {
     "theme":"Umum",
-    "themeid":"1",
-    "title":"Mata uang Jepang adalah?",
+    "themeid":"0",
+    "title":"Di mana pusat keuangan Amerika Serikat?",
     "correct":1,
     "fourPick":true,
     "answers":
         [
             {
-                "text":"Yen",
+                "text":"New York",
                 "id":1
             },
             {
-                "text":"Baht",
+                "text":"template",
                 "id":2
             },
             {
-                "text":"Peso",
+                "text":"template",
                 "id":3
             },
             {
-                "text":"Real",
+                "text":"template",
                 "id":4
             }
         ]

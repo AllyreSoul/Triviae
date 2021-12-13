@@ -1,25 +1,25 @@
 {
     "theme":"Umum",
-    "themeid":"1",
-    "title":"Mata uang Jepang adalah?",
-    "correct":1,
+    "themeid":"0",
+    "title":"Ada berapa kaki pada kaki seribu? sekitar..",
+    "correct":4,
     "fourPick":true,
     "answers":
         [
             {
-                "text":"Yen",
+                "text":"1000",
                 "id":1
             },
             {
-                "text":"Baht",
+                "text":"500",
                 "id":2
             },
             {
-                "text":"Peso",
+                "text":"800",
                 "id":3
             },
             {
-                "text":"Real",
+                "text":"400",
                 "id":4
             }
         ]

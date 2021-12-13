@@ -1,25 +1,25 @@
 {
     "theme":"Umum",
-    "themeid":"1",
-    "title":"Mata uang Jepang adalah?",
+    "themeid":"0",
+    "title":"Buah yang mengandung kadar vitamin C tertinggi adalah ?",
     "correct":1,
-    "fourPick":true,
+    "fourPick":false,
     "answers":
         [
             {
-                "text":"Yen",
+                "text":"Jambu biji",
                 "id":1
             },
             {
-                "text":"Baht",
+                "text":"Jeruk",
                 "id":2
             },
             {
-                "text":"Peso",
+                "text":"Kiwi",
                 "id":3
             },
             {
-                "text":"Real",
+                "text":"Lemon",
                 "id":4
             }
         ]

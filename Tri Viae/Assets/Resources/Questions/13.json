@@ -1,0 +1,18 @@
+{
+    "theme":"Umum",
+    "themeid":"0",
+    "title":"Apakah negara Jerman menyerang Polandia pada tanggal September 1, 1939? ",
+    "correct":1,
+    "fourPick":false,
+    "answers":
+        [
+            {
+                "text":"True",
+                "id":1
+            },
+            {
+                "text":"False",
+                "id":2
+            },
+        ]
+}

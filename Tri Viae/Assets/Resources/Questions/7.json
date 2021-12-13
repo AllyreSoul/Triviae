@@ -1,25 +1,25 @@
 {
     "theme":"Umum",
-    "themeid":"1",
-    "title":"Mata uang Jepang adalah?",
+    "themeid":"0",
+    "title":"Gedung tertinggi di dunia adalah?",
     "correct":1,
     "fourPick":true,
     "answers":
         [
             {
-                "text":"Yen",
+                "text":"Burj Khalifa",
                 "id":1
             },
             {
-                "text":"Baht",
+                "text":"Menara Eiffel",
                 "id":2
             },
             {
-                "text":"Peso",
+                "text":"Empire State Building",
                 "id":3
             },
             {
-                "text":"Real",
+                "text":"Menara Petronas",
                 "id":4
             }
         ]

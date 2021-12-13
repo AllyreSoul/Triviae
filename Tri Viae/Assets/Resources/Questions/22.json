@@ -1,25 +1,25 @@
 {
     "theme":"Umum",
-    "themeid":"1",
-    "title":"Mata uang Jepang adalah?",
-    "correct":1,
+    "themeid":"0",
+    "title":"Kota yang dijuluki kota bahari adalah…",
+    "correct":4,
     "fourPick":true,
     "answers":
         [
             {
-                "text":"Yen",
+                "text":"Bekasi",
                 "id":1
             },
             {
-                "text":"Baht",
+                "text":"Sulawesi",
                 "id":2
             },
             {
-                "text":"Peso",
+                "text":"Jakarta",
                 "id":3
             },
             {
-                "text":"Real",
+                "text":"Tegal",
                 "id":4
             }
         ]

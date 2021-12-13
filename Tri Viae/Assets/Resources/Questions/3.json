@@ -1,25 +1,25 @@
 {
-    "theme":"hewo",
+    "theme":"Umum",
     "themeid":"0",
-    "title":"SAYOOONARA SAYOOONARA",
+    "title":"Dari 4 hewan berikut ini, yang merupakan hewan amfibi adalah…",
     "correct":2,
     "fourPick":true,
     "answers":
         [
             {
-                "text":"Poland",
+                "text":"Ayam",
                 "id":1
             },
             {
-                "text":"A Satnav",
+                "text":"Kodok",
                 "id":2
             },
             {
-                "text":"That Only goes",
+                "text":"Salmon",
                 "id":3
             },
             {
-                "text":"To",
+                "text":"Semut",
                 "id":4
             }
         ]

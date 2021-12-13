@@ -1,25 +1,25 @@
 {
-    "theme":"Umum",
-    "themeid":"1",
-    "title":"Mata uang Jepang adalah?",
+    "theme":"Musik",
+    "themeid":"0",
+    "title":"Dalam Teori Musik, ada berapa not?",
     "correct":1,
     "fourPick":true,
     "answers":
         [
             {
-                "text":"Yen",
+                "text":"12",
                 "id":1
             },
             {
-                "text":"Baht",
+                "text":"13",
                 "id":2
             },
             {
-                "text":"Peso",
+                "text":"11",
                 "id":3
             },
             {
-                "text":"Real",
+                "text":"15",
                 "id":4
             }
         ]

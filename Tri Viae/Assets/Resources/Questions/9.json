@@ -1,25 +1,25 @@
 {
     "theme":"Umum",
-    "themeid":"1",
-    "title":"Mata uang Jepang adalah?",
-    "correct":1,
+    "themeid":"0",
+    "title":"Kapan diperingati hari air sedunia?",
+    "correct":2,
     "fourPick":true,
     "answers":
         [
             {
-                "text":"Yen",
+                "text":"25 Juni",
                 "id":1
             },
             {
-                "text":"Baht",
+                "text":"22 Maret",
                 "id":2
             },
             {
-                "text":"Peso",
+                "text":"10 Oktober",
                 "id":3
             },
             {
-                "text":"Real",
+                "text":"6 Februari",
                 "id":4
             }
         ]

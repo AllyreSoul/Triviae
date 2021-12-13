@@ -1,25 +1,25 @@
 {
     "theme":"Umum",
-    "themeid":"1",
-    "title":"Mata uang Jepang adalah?",
+    "themeid":"0",
+    "title":"Siapa penemu mesin uap?",
     "correct":1,
     "fourPick":true,
     "answers":
         [
             {
-                "text":"Yen",
+                "text":"James Watt",
                 "id":1
             },
             {
-                "text":"Baht",
+                "text":"Michael Faraday",
                 "id":2
             },
             {
-                "text":"Peso",
+                "text":"Gottlieb Daimler",
                 "id":3
             },
             {
-                "text":"Real",
+                "text":"Charles Babbage",
                 "id":4
             }
         ]
