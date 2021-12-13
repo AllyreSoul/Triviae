@@ -6,24 +6,26 @@ using UnityEngine;
 
 public class GameHandler : MonoBehaviour
 {
+    public Transform spawn;
+    public Transform player;
     public Transform Anchor;
     public GameObject fourPickArray;
     public question assignedQuestion;
     public question[] questions;
     public int length;
     public int trueLength;
-    public event Action onQuestionsAssigned;
     public QuestionArray qArray;
     public GameObject gate;
     public GameObject indicatorObject;
     public randomizedList[] randomizedLists;
     public Indicator indicator;
+    public GameObject questionArray;
     // Start is called before the first frame update
     void Start()
     {
         length = int.Parse(Resources.Load<TextAsset>("Questions/index").ToString());
         initialize();
-        onReload("1");
+        readNextQuestions();
     }
 
     void initialize(){
@@ -40,7 +42,8 @@ public class GameHandler : MonoBehaviour
         randomizedLists[1].internalIndex = 0;
         randomizedLists[2].internalIndex = 0;
         for(int i = 0; i <= length - 1; i++){
-            list[i] = i;
+            list[i] = i + 1;
+            Debug.Log(i + 1);
         }
         var random = new System.Random();
         random.Shuffle<int>(list);
@@ -62,17 +65,21 @@ public class GameHandler : MonoBehaviour
             }
         }
     }
-    void onReload(string QuestionChosen){
+    public void Reload(int id){
+        GameObject.Destroy(indicator.gameObject);
+        GameObject.Destroy(questionArray);
+        player.position = spawn.position;
+        SetQuestions(id);
+    }
+    void SetQuestions(int id){
         gate.gameObject.SetActive(true);
-        assignedQuestion = readJSON(QuestionChosen);
+        assignedQuestion = questions[id];
         var random = new System.Random();
         random.Shuffle<answers>(assignedQuestion.answers);
-        foreach(answers i in assignedQuestion.answers){
-        }
         if(assignedQuestion.fourPick){
-            var fpick = Instantiate(fourPickArray, Anchor);
-            fpick.transform.parent = Anchor;
-            qArray = fpick.GetComponent<QuestionArray>();
+            questionArray = Instantiate(fourPickArray, Anchor);
+            questionArray.transform.parent = Anchor;
+            qArray = questionArray.GetComponent<QuestionArray>();
             qArray.questionName = assignedQuestion.title;
             qArray._onQuestionsAssigned();
             for(int i = 0; i <= 3; i++){
@@ -83,6 +90,7 @@ public class GameHandler : MonoBehaviour
     }
     question readJSON(string fileName){
         var file = Resources.Load<TextAsset>($"Questions/{fileName}");
+        Debug.Log(fileName);
         question question = JsonUtility.FromJson<question>(file.text);
         return question;
     }
@@ -100,21 +108,27 @@ public class GameHandler : MonoBehaviour
             qArray.buttonSteps[i].updateColor(assignedQuestion.correct);
         }
         gate.gameObject.SetActive(false);
-        var indication = Instantiate(indicatorObject, Anchor);
-        indication.transform.parent = Anchor;
-        indicator = indication.GetComponent<Indicator>();
         readNextQuestions();
     }
 
     public void readNextQuestions(){
+        var indication = Instantiate(indicatorObject, Anchor);
+        indication.transform.parent = Anchor;
+        indicator = indication.GetComponent<Indicator>();
         questions = new question[3];
-        for(int i = 0; i <= 2; i++){
-            int path = randomizedLists[i].id[randomizedLists[i].internalIndex] + 1;
-            questions[i] = readJSON(path.ToString());
-            Debug.Log(questions[i].theme);
-            randomizedLists[i].internalIndex++;
-            indicator.onAnswered(questions[i].theme, i);
-        }  
+        if(trueLength <= randomizedLists[1].internalIndex){
+            GameObject.Destroy(indicator.gameObject);
+            GameObject.Destroy(questionArray);
+            player.position = spawn.position;
+        } else {
+            for(int i = 0; i <= 2; i++){
+                int path = randomizedLists[i].id[randomizedLists[i].internalIndex];
+                questions[i] = readJSON(path.ToString());
+                Debug.Log(questions[i].theme);
+                randomizedLists[i].internalIndex++;
+                indicator.onAnswered(questions[i].theme, i);
+            } 
+        }
+        Debug.Log("True Length: " + trueLength + "Current Index: " + randomizedLists[1].internalIndex + "\nCurrent IDs:" + randomizedLists[0].id?[randomizedLists[0].internalIndex] + " " + randomizedLists[1].id?[randomizedLists[1].internalIndex]+" " + randomizedLists[2].id?[randomizedLists[2].internalIndex]);
     }
-
 }
