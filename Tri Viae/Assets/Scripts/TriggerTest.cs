@@ -9,7 +9,4 @@ public class TriggerTest : MonoBehaviour
     {
        Debug.Log("script loaded!"); 
     }
-    private void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log("trigger");
-    }
 }

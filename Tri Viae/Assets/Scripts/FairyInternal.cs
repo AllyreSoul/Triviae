@@ -24,18 +24,18 @@ public class FairyInternal : MonoBehaviour
     IEnumerator AnimateFairy(){
         
         light.color = new Color32((byte)rgb.R, (byte)rgb.G, (byte)rgb.B, 255);
-        for(float i = 0; i <= 0.45f; i += mod ){
+        for(float i = 0; i <= 0.80f; i += mod ){
             light.intensity = i;
             yield return new WaitForSeconds(Delay);
         }
-        if(light.intensity >= 0.4f){
+        if(light.intensity >= 0.75f){
             yield return StartCoroutine(FadeFairy(light));
         }
         
     }
     IEnumerator FadeFairy(Light2D light){
         StopCoroutine("AnimateFairy");
-        for(float i = 0.4f; i >= -0.5f; i -= mod){
+        for(float i = 0.75f; i >= -0.5f; i -= mod){
             light.intensity = i;
             yield return new WaitForSeconds(Delay);
             executed = true;

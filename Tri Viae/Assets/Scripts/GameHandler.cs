@@ -3,6 +3,7 @@ using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameHandler : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class GameHandler : MonoBehaviour
     public randomizedList[] randomizedLists;
     public Indicator indicator;
     public GameObject questionArray;
+    public RealScore realScore;
     // Start is called before the first frame update
     void Start()
     {
@@ -64,6 +66,10 @@ public class GameHandler : MonoBehaviour
                 r.id.RemoveAt(trueLength - 1);
             }
         }
+        Data.correct = new bool[trueLength];
+        Data.questions = new question[trueLength];
+        realScore.length = trueLength;
+        realScore.UpdateProgress(0);
         createIndicator();
         readNextQuestions();
     }
@@ -99,6 +105,8 @@ public class GameHandler : MonoBehaviour
                 qArray.buttonSteps[i]._onQuestionsAssigned();
             }
         }
+        Data.questions[randomizedLists[0].internalIndex] = assignedQuestion;
+        Debug.Log(Data.questions[randomizedLists[0].internalIndex].title);
     }
     question readJSON(string fileName){
         var file = Resources.Load<TextAsset>($"Questions/{fileName}");
@@ -110,10 +118,11 @@ public class GameHandler : MonoBehaviour
     public void answered(int answer){
         if(answer == assignedQuestion.correct)
         {
-
+            Data.correct[randomizedLists[0].internalIndex] = true;
+            Data.score++;
         } else 
         {
-
+            Data.correct[randomizedLists[0].internalIndex] = false;
         }
         for(int i = 0; i <= qArray.buttonSteps.Length - 1; i++){
             qArray.buttonSteps[i].buttonEnabled = false;
@@ -126,7 +135,14 @@ public class GameHandler : MonoBehaviour
             GameObject.Destroy(indicator.gameObject);
             GameObject.Destroy(questionArray);
             player.position = spawn.position;
-        } else readNextQuestions();
+            SceneManager.LoadScene("End Screen");
+        } else {
+            randomizedLists[0].internalIndex++;
+            randomizedLists[1].internalIndex++;
+            randomizedLists[2].internalIndex++;
+            realScore.UpdateProgress(randomizedLists[0].internalIndex);
+            readNextQuestions();
+        }
     }
 
     public void readNextQuestions(){
@@ -135,7 +151,6 @@ public class GameHandler : MonoBehaviour
                 int path = randomizedLists[i].id[randomizedLists[i].internalIndex];
                 questions[i] = readJSON(path.ToString());
                 Debug.Log(questions[i].theme + " " + path);
-                randomizedLists[i].internalIndex++;
                 indicator.onAnswered(questions[i].theme, i);
             } 
         if(randomizedLists[0].internalIndex <= 15){
