@@ -10,6 +10,7 @@ public class GameHandler : MonoBehaviour
     public Transform player;
     public Transform Anchor;
     public GameObject fourPickArray;
+    public GameObject twoPickArray;
     public question assignedQuestion;
     public question[] questions;
     public int length;
@@ -25,7 +26,6 @@ public class GameHandler : MonoBehaviour
     {
         length = int.Parse(Resources.Load<TextAsset>("Questions/index").ToString());
         initialize();
-        readNextQuestions();
     }
 
     void initialize(){
@@ -64,6 +64,8 @@ public class GameHandler : MonoBehaviour
                 r.id.RemoveAt(trueLength - 1);
             }
         }
+        createIndicator();
+        readNextQuestions();
     }
     public void Reload(int id){
         GameObject.Destroy(indicator.gameObject);
@@ -86,6 +88,16 @@ public class GameHandler : MonoBehaviour
                 qArray.buttonSteps[i].assignedAnswer = assignedQuestion.answers[i];
                 qArray.buttonSteps[i]._onQuestionsAssigned();
             }
+        } else{
+            questionArray = Instantiate(twoPickArray, Anchor);
+            questionArray.transform.parent = Anchor;
+            qArray = questionArray.GetComponent<QuestionArray>();
+            qArray.questionName = assignedQuestion.title;
+            qArray._onQuestionsAssigned();
+            for(int i = 0; i <= 1; i++){
+                qArray.buttonSteps[i].assignedAnswer = assignedQuestion.answers[i];
+                qArray.buttonSteps[i]._onQuestionsAssigned();
+            }
         }
     }
     question readJSON(string fileName){
@@ -103,32 +115,38 @@ public class GameHandler : MonoBehaviour
         {
 
         }
-        for(int i = 0; i <= 3; i++){
+        for(int i = 0; i <= qArray.buttonSteps.Length - 1; i++){
             qArray.buttonSteps[i].buttonEnabled = false;
             qArray.buttonSteps[i].updateColor(assignedQuestion.correct);
         }
         gate.gameObject.SetActive(false);
-        readNextQuestions();
-    }
-
-    public void readNextQuestions(){
-        var indication = Instantiate(indicatorObject, Anchor);
-        indication.transform.parent = Anchor;
-        indicator = indication.GetComponent<Indicator>();
-        questions = new question[3];
-        if(trueLength <= randomizedLists[1].internalIndex){
+        createIndicator();
+        Debug.Log(randomizedLists[1].internalIndex);
+        if(trueLength <= randomizedLists[1].internalIndex + 1){
             GameObject.Destroy(indicator.gameObject);
             GameObject.Destroy(questionArray);
             player.position = spawn.position;
-        } else {
+        } else readNextQuestions();
+    }
+
+    public void readNextQuestions(){
+        questions = new question[3];
             for(int i = 0; i <= 2; i++){
                 int path = randomizedLists[i].id[randomizedLists[i].internalIndex];
                 questions[i] = readJSON(path.ToString());
-                Debug.Log(questions[i].theme);
+                Debug.Log(questions[i].theme + " " + path);
                 randomizedLists[i].internalIndex++;
                 indicator.onAnswered(questions[i].theme, i);
             } 
+        if(randomizedLists[0].internalIndex <= 15){
+            Debug.Log("True Length: " + trueLength + "Current Index: " + randomizedLists[1].internalIndex + "\nCurrent IDs:" + randomizedLists[0].id?[randomizedLists[0].internalIndex] + " " + randomizedLists[1].id?[randomizedLists[1].internalIndex]+" " + randomizedLists[2].id?[randomizedLists[2].internalIndex]);
         }
-        Debug.Log("True Length: " + trueLength + "Current Index: " + randomizedLists[1].internalIndex + "\nCurrent IDs:" + randomizedLists[0].id?[randomizedLists[0].internalIndex] + " " + randomizedLists[1].id?[randomizedLists[1].internalIndex]+" " + randomizedLists[2].id?[randomizedLists[2].internalIndex]);
+        
+    }
+
+    void createIndicator(){
+        var indication = Instantiate(indicatorObject, Anchor);
+        indication.transform.parent = Anchor;
+        indicator = indication.GetComponent<Indicator>();
     }
 }

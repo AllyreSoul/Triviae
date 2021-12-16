@@ -7,19 +7,19 @@
     "answers":
         [
             {
-                "text":"6°LU-11°LS dan 95°BT-141°BT",
+                "text":"6°LU-11°LS\n95°BT-141°BT",
                 "id":1
             },
             {
-                "text":"7°LU-19°LS dan 90°BT-143°BT",
+                "text":"7°LU-19°LS\n90°BT-143°BT",
                 "id":2
             },
             {
-                "text":"6°LU-11°LS dan 96°BT-149°BT",
+                "text":"6°LU-11°LS\n96°BT-149°BT",
                 "id":3
             },
             {
-                "text":"6°LU-12°LS dan 100°BT-141°BT",
+                "text":"6°LU-12°LS\n    100°BT-141°BT",
                 "id":4
             }
         ]

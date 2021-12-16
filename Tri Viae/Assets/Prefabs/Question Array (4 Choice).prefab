@@ -218,7 +218,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -296,6 +296,7 @@ MonoBehaviour:
     text: 
     id: 0
   textWriterQArray: {fileID: 101407422060574753}
+  buttonEnabled: 0
 --- !u!50 &2086026378223828802
 Rigidbody2D:
   serializedVersion: 4
@@ -371,7 +372,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -449,6 +450,7 @@ MonoBehaviour:
     text: 
     id: 0
   textWriterQArray: {fileID: 8845599004917073007}
+  buttonEnabled: 0
 --- !u!50 &8595142338623641093
 Rigidbody2D:
   serializedVersion: 4
@@ -742,7 +744,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -820,6 +822,7 @@ MonoBehaviour:
     text: 
     id: 0
   textWriterQArray: {fileID: 7588211827154108002}
+  buttonEnabled: 0
 --- !u!50 &7879770225968076426
 Rigidbody2D:
   serializedVersion: 4
@@ -895,7 +898,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -973,6 +976,7 @@ MonoBehaviour:
     text: 
     id: 0
   textWriterQArray: {fileID: 3500745371341562555}
+  buttonEnabled: 0
 --- !u!50 &8399176918042912961
 Rigidbody2D:
   serializedVersion: 4
