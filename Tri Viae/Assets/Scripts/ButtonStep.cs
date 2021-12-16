@@ -29,7 +29,7 @@ public class ButtonStep : MonoBehaviour
 
     public void updateColor(int id){
         if(id == assignedAnswer.id){
-            textWriterQArray.updateColour(new Color32(2, 94, 27, 255));
+            textWriterQArray.updateColour(new Color32(37, 65, 23, 255));
         }else
         textWriterQArray.updateColour(new Color32(153, 2, 9, 255));
         

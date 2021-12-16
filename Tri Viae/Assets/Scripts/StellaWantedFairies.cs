@@ -14,16 +14,17 @@ public class StellaWantedFairies : MonoBehaviour
     private void Start() {
         Delay = time/(0.4f/mod);
         StartCoroutine("GenerateFairy");
+        Debug.Log(RGBVal.Length);
     }
     IEnumerator GenerateFairy(){
         for(;;){
-            var fae = Instantiate(Fairy, FairyPositions[Random.Range(0, 6)].transform);
+            var fae = Instantiate(Fairy, FairyPositions[Random.Range(0, FairyPositions.Length)].transform);
             FairyInternal faeInternal = fae.gameObject.GetComponent<FairyInternal>();
             faeInternal.Delay = Delay;
-            faeInternal.rgb = RGBVal[Random.Range(0, RGBVal.Length - 1)];
+            faeInternal.rgb = RGBVal[Random.Range(0, RGBVal.Length)];
             faeInternal.mod = mod;
             Debug.Log("done");
-        yield return new WaitForSeconds(time + Random.Range(3, 5));    
+        yield return new WaitForSeconds(Random.Range(1, 5));    
         }
         
     }
