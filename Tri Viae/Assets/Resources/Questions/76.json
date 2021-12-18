@@ -1,0 +1,26 @@
+{
+    "theme":"7 Habits",
+    "themeid":"0",
+    "title":"Habit pertama adalah…",
+    "correct":2,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Sharpen The Saw",
+                "id":1
+            },
+            {
+                "text":"Be Proactive",
+                "id":2
+            },
+            {
+                "text":"Put First Things First",
+                "id":3
+            },
+            {
+                "text":"Synergize",
+                "id":4
+            }
+        ]
+}

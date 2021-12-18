@@ -1,0 +1,26 @@
+{
+    "theme":"Umum",
+    "themeid":"0",
+    "title":"Kota apa di India yang ditempati oleh Taj Mahal",
+    "correct":1,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Agra",
+                "id":1
+            },
+            {
+                "text":"Gorontalo",
+                "id":2
+            },
+            {
+                "text":"Gorontalo",
+                "id":3
+            },
+            {
+                "text":"New Delhi",
+                "id":4
+            }
+        ]
+}

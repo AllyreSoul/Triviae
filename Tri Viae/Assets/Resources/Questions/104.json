@@ -1,0 +1,26 @@
+{
+    "theme":"Sejarah",
+    "themeid":"0",
+    "title":"Apa nama jabatan ratu dan raja di Mesir pada zaman dahulu",
+    "correct":1,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Pharaoh",
+                "id":1
+            },
+            {
+                "text":"Raja/Ratu",
+                "id":2
+            },
+            {
+                "text":"Monarch",
+                "id":3
+            },
+            {
+                "text":"Caesar",
+                "id":4
+            }
+        ]
+}

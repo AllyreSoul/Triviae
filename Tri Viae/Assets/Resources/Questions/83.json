@@ -1,0 +1,26 @@
+{
+    "theme":"Makanan",
+    "themeid":"0",
+    "title":"Makanan apa yang menjadi makanan favorit Pak Jokowi?",
+    "correct":1,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Soto Kuning",
+                "id":1
+            },
+            {
+                "text":"Soto Mie",
+                "id":2
+            },
+            {
+                "text":"Sayur Asam",
+                "id":3
+            },
+            {
+                "text":"Sayur Kol",
+                "id":4
+            }
+        ]
+}

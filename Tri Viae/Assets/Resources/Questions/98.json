@@ -1,0 +1,26 @@
+{
+    "theme":"Sejarah",
+    "themeid":"0",
+    "title":"Apa nama bom yang dijatuhkan ke Hiroshima",
+    "correct":1,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Little Boy",
+                "id":1
+            },
+            {
+                "text":"Fat Man",
+                "id":2
+            },
+            {
+                "text":"Castle Bravo",
+                "id":3
+            },
+            {
+                "text":"AN602",
+                "id":4
+            }
+        ]
+}

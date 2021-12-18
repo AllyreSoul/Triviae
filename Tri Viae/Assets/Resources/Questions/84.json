@@ -1,0 +1,18 @@
+{
+    "theme":"Makanan",
+    "themeid":"0",
+    "title":"Indomie sudah tersebar ke seluruh dunia.",
+    "correct":1,
+    "fourPick":false,
+    "answers":
+        [
+            {
+                "text":"True",
+                "id":1
+            },
+            {
+                "text":"False",
+                "id":2
+            }
+        ]
+}

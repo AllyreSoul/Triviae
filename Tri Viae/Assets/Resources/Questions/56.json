@@ -1,0 +1,26 @@
+{
+    "theme":"Natal",
+    "themeid":"0",
+    "title":"Kalau lahir pada hari Natal, apa zodiakmu?",
+    "correct":1,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Capricorn",
+                "id":1
+            },
+            {
+                "text":"Aries",
+                "id":2
+            },
+            {
+                "text":"Sagittarius",
+                "id":3
+            },
+            {
+                "text":"Scorpio",
+                "id":4
+            }
+        ]
+}

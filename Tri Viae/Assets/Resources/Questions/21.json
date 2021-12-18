@@ -1,5 +1,5 @@
 {
-    "theme":"Umum",
+    "theme":"Geografi",
     "themeid":"0",
     "title":"Di mana letak astronomis Indonesia?",
     "correct":1,
@@ -19,7 +19,7 @@
                 "id":3
             },
             {
-                "text":"6°LU-12°LS\n    100°BT-141°BT",
+                "text":"6°LU-12°LS\n100°BT-141°BT",
                 "id":4
             }
         ]

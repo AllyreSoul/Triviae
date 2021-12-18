@@ -1,0 +1,26 @@
+{
+    "theme":"Natal",
+    "themeid":"0",
+    "title":"Siapa dua nama Santa Claus yang paling populer?",
+    "correct":1,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Kris Kringle dan Santa Nick",
+                "id":1
+            },
+            {
+                "text":"Santa Nicolas dan Santa Theresia",
+                "id":2
+            },
+            {
+                "text":"Santa Angela Merici dan Santo Petrus",
+                "id":3
+            },
+            {
+                "text":"Santa Claus dan Santa Nick.",
+                "id":4
+            }
+        ]
+}

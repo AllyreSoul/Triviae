@@ -1,0 +1,26 @@
+{
+    "theme":"Geografi",
+    "themeid":"0",
+    "title":"Negara apa yang merupakan negara terkecil di dunia?",
+    "correct":1,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Vatican City",
+                "id":1
+            },
+            {
+                "text":"Amerika Serikat",
+                "id":2
+            },
+            {
+                "text":"Micronesia",
+                "id":3
+            },
+            {
+                "text":"Saint Vincent and the Grenadines",
+                "id":4
+            }
+        ]
+}

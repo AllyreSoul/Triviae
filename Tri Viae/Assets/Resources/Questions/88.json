@@ -1,0 +1,26 @@
+{
+    "theme":"Makanan",
+    "themeid":"0",
+    "title":"Apa perbedaan dari kue lupis, klepon, dan kue putu?",
+    "correct":3,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Perbedaan Isi",
+                "id":1
+            },
+            {
+                "text":"Perbedaan Warna",
+                "id":2
+            },
+            {
+                "text":"Perbedaan Tekstur",
+                "id":3
+            },
+            {
+                "text":"Perbedaan Asal Negara",
+                "id":4
+            }
+        ]
+}

@@ -1,0 +1,26 @@
+{
+    "theme":"Umum",
+    "themeid":"0",
+    "title":"Siapakah negara penemu radio ?",
+    "correct":3,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Amerika",
+                "id":1
+            },
+            {
+                "text":"Eropa",
+                "id":2
+            },
+            {
+                "text":"Italia",
+                "id":3
+            },
+            {
+                "text":"Singapura",
+                "id":4
+            }
+        ]
+}

@@ -1,0 +1,26 @@
+{
+    "theme":"7 Habits",
+    "themeid":"0",
+    "title":"Habits 4, 5, 6 berfokus pada pengembangan sifat…",
+    "correct":1,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Kerja Sama",
+                "id":1
+            },
+            {
+                "text":"Proaktif",
+                "id":2
+            },
+            {
+                "text":"Keramahan",
+                "id":3
+            },
+            {
+                "text":"Egois",
+                "id":4
+            }
+        ]
+}

@@ -1,0 +1,26 @@
+{
+    "theme":"Sejarah",
+    "themeid":"0",
+    "title":"Kapan Perang Dunia Pertama mulai?",
+    "correct":1,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"1914",
+                "id":1
+            },
+            {
+                "text":"1870",
+                "id":2
+            },
+            {
+                "text":"1939",
+                "id":3
+            },
+            {
+                "text":"400 BC",
+                "id":4
+            }
+        ]
+}

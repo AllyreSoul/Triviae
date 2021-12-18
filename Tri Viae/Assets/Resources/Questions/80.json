@@ -1,0 +1,26 @@
+{
+    "theme":"Makanan",
+    "themeid":"0",
+    "title":"Fast Food yang ahlinya burger adalah?",
+    "correct":1,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"KFC",
+                "id":1
+            },
+            {
+                "text":"Pizza Hut",
+                "id":2
+            },
+            {
+                "text":"Carl’s Jr",
+                "id":3
+            },
+            {
+                "text":"Reddog",
+                "id":4
+            }
+        ]
+}

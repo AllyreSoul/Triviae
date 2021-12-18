@@ -1,0 +1,26 @@
+{
+    "theme":"Kampus",
+    "themeid":"0",
+    "title":"7 bintang dalam logo serviam melambangkan suatu gugusan bintang, yaitu…",
+    "correct":1,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Ursa Minor",
+                "id":1
+            },
+            {
+                "text":"Ursa Major",
+                "id":2
+            },
+            {
+                "text":"Feles",
+                "id":3
+            },
+            {
+                "text":"Carmen Dei",
+                "id":4
+            }
+        ]
+}

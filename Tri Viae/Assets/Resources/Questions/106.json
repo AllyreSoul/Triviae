@@ -1,0 +1,26 @@
+{
+    "theme":"Umum",
+    "themeid":"0",
+    "title":"Negara apa yang merupakan tempat lahir Mozart?",
+    "correct":1,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Austria",
+                "id":1
+            },
+            {
+                "text":"Jerman",
+                "id":2
+            },
+            {
+                "text":"Perancis",
+                "id":3
+            },
+            {
+                "text":"Belgium",
+                "id":4
+            }
+        ]
+}

@@ -1,0 +1,26 @@
+{
+    "theme":"Umum",
+    "themeid":"0",
+    "title":"Shortcut untuk copy di komputer adalah?",
+    "correct":1,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Ctrl + C",
+                "id":1
+            },
+            {
+                "text":"Ctrl + V",
+                "id":2
+            },
+            {
+                "text":"Ctrl + Alt + Del",
+                "id":3
+            },
+            {
+                "text":"Alt + F4",
+                "id":4
+            }
+        ]
+}

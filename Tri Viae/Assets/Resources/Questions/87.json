@@ -1,0 +1,26 @@
+{
+    "theme":"Makanan",
+    "themeid":"0",
+    "title":"Kerak telor adalah makanan khas dari?",
+    "correct":3,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Banjarmasin",
+                "id":1
+            },
+            {
+                "text":"Semarang",
+                "id":2
+            },
+            {
+                "text":"Jakarta",
+                "id":3
+            },
+            {
+                "text":"Makassar",
+                "id":4
+            }
+        ]
+}

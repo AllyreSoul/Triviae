@@ -1,0 +1,26 @@
+{
+    "theme":"Umum",
+    "themeid":"0",
+    "title":"Apa bahan bakar mobil?",
+    "correct":1,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"bensin",
+                "id":1
+            },
+            {
+                "text":"minyak sawit",
+                "id":2
+            },
+            {
+                "text":"batu bara",
+                "id":3
+            },
+            {
+                "text":"avtur",
+                "id":4
+            }
+        ]
+}

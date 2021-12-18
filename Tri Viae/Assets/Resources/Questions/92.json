@@ -1,0 +1,26 @@
+{
+    "theme":"Kimia",
+    "themeid":"0",
+    "title":"Yang mana merupakan konfigurasi elektron Ni?",
+    "correct":1,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"[Ar] 4s^2 3d^8",
+                "id":1
+            },
+            {
+                "text":"[Kr] 5s^2",
+                "id":2
+            },
+            {
+                "text":"[Ar] 4s^1 3d^5",
+                "id":3
+            },
+            {
+                "text":"[He] 1s^2 2s^2",
+                "id":4
+            }
+        ]
+}

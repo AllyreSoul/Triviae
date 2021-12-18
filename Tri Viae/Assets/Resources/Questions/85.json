@@ -1,0 +1,26 @@
+{
+    "theme":"Makanan",
+    "themeid":"0",
+    "title":"Jenis sate yang menggunakan bumbu kacang adalah?",
+    "correct":2,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Sate Padang",
+                "id":1
+            },
+            {
+                "text":"Sate Madura",
+                "id":2
+            },
+            {
+                "text":"Sate Buntel",
+                "id":3
+            },
+            {
+                "text":"Sate Maranggi",
+                "id":4
+            }
+        ]
+}
