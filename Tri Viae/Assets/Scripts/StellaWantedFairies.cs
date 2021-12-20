@@ -22,6 +22,8 @@ public class StellaWantedFairies : MonoBehaviour
                 Transform pos = FairyPositions[Random.Range(0, FairyPositions.Length)].transform;
                 var fae = Instantiate(Fairy, new Vector2(pos.position.x + Random.Range(1, 3), pos.transform.position.y + Random.Range(1, 3)), Quaternion.identity, pos);
                 FairyInternal faeInternal = fae.gameObject.GetComponent<FairyInternal>();
+                FairyLerp lerpInternal = fae.gameObject.GetComponent<FairyLerp>();
+                lerpInternal.time = time;
                 faeInternal.Delay = Delay;
                 faeInternal.rgb = RGBVal[Random.Range(0, RGBVal.Length)];
                 faeInternal.mod = mod;
@@ -31,6 +33,8 @@ public class StellaWantedFairies : MonoBehaviour
         
     }
 }
+
+
 [System.Serializable]
 public struct RGBVal{
     public int R, G, B;
