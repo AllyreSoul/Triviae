@@ -74,7 +74,7 @@ public class GameHandler : MonoBehaviour
             }
         }
         Data.correct = new bool[trueLength];
-        Data.questions = new question[trueLength];
+        Data.questions = new List<question>();
         Data.length = trueLength;
         realScore.length = trueLength;
         realScore.UpdateProgress(0);
@@ -113,7 +113,7 @@ public class GameHandler : MonoBehaviour
                 qArray.buttonSteps[i]._onQuestionsAssigned();
             }
         }
-        Data.questions[randomizedLists[0].internalIndex] = assignedQuestion;
+        Data.questions.Add(assignedQuestion);
         Debug.Log(Data.questions[randomizedLists[0].internalIndex].title);
     }
     question readJSON(string fileName){
