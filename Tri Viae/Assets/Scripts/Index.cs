@@ -39,3 +39,7 @@ public struct randomizedList{
     public List<int> id;
     public int internalIndex;
 }
+
+public interface Enemy{
+    void TakeDamage(float dmg);
+}

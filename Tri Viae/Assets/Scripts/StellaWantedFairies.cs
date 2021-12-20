@@ -14,7 +14,6 @@ public class StellaWantedFairies : MonoBehaviour
     private void Start() {
         Delay = time/(0.8f/mod);
         StartCoroutine("GenerateFairy");
-        Debug.Log(RGBVal.Length);
     }
     IEnumerator GenerateFairy(){
         for(;;){
@@ -26,7 +25,6 @@ public class StellaWantedFairies : MonoBehaviour
                 faeInternal.Delay = Delay;
                 faeInternal.rgb = RGBVal[Random.Range(0, RGBVal.Length)];
                 faeInternal.mod = mod;
-                Debug.Log("done");
                 }
         yield return new WaitForSeconds(Random.Range(1, 5));    
         }

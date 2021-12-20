@@ -23,6 +23,9 @@ public class GameHandler : MonoBehaviour
     public Indicator indicator;
     public GameObject questionArray;
     public RealScore realScore;
+    public Transform[] EnemyAnchors;
+    public int[] DiceRoll;
+    public GameObject[] Enemies;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +34,10 @@ public class GameHandler : MonoBehaviour
     }
 
     void initialize(){
+        DiceRoll= new int[7];
+        for(int i = 0; i <= 6; i++){
+            DiceRoll[i] = i;
+        }
         int index = 0;
         int[] list = new int[length];
         randomizedLists = new randomizedList[3];
@@ -68,6 +75,7 @@ public class GameHandler : MonoBehaviour
         }
         Data.correct = new bool[trueLength];
         Data.questions = new question[trueLength];
+        Data.length = trueLength;
         realScore.length = trueLength;
         realScore.UpdateProgress(0);
         createIndicator();
@@ -120,10 +128,16 @@ public class GameHandler : MonoBehaviour
         {
             Data.correct[randomizedLists[0].internalIndex] = true;
             Data.score++;
+            InitializeNextQuestions();
         } else 
         {
             Data.correct[randomizedLists[0].internalIndex] = false;
+            InitializeEnemies(1);
+            StartCoroutine(CheckEnemies());
         }
+    }
+    public void InitializeNextQuestions(){
+        StopAllCoroutines();
         for(int i = 0; i <= qArray.buttonSteps.Length - 1; i++){
             qArray.buttonSteps[i].buttonEnabled = false;
             qArray.buttonSteps[i].updateColor(assignedQuestion.correct);
@@ -135,6 +149,7 @@ public class GameHandler : MonoBehaviour
             GameObject.Destroy(indicator.gameObject);
             GameObject.Destroy(questionArray);
             player.position = spawn.position;
+            Data.completed = true;
             SceneManager.LoadScene("End Screen");
         } else {
             randomizedLists[0].internalIndex++;
@@ -144,7 +159,6 @@ public class GameHandler : MonoBehaviour
             readNextQuestions();
         }
     }
-
     public void readNextQuestions(){
         questions = new question[3];
             for(int i = 0; i <= 2; i++){
@@ -163,5 +177,22 @@ public class GameHandler : MonoBehaviour
         var indication = Instantiate(indicatorObject, Anchor);
         indication.transform.parent = Anchor;
         indicator = indication.GetComponent<Indicator>();
+    }
+    private void InitializeEnemies(int num){
+        GameObject.Destroy(questionArray);
+        Index.Shuffle<int>(new System.Random(), DiceRoll);
+        for(int i = 0; i <= num - 1; i++){
+            Instantiate(Enemies[0], new Vector3(EnemyAnchors[DiceRoll[i]].position.x, EnemyAnchors[DiceRoll[i]].position.y, -0.2f), Quaternion.identity);
+        }
+    }
+
+    IEnumerator CheckEnemies(){
+        for(;;){
+            Debug.Log("test");
+            if(GameObject.FindGameObjectsWithTag("Enemy").Length <= 0){
+                InitializeNextQuestions();
+            }
+            yield return new WaitForSeconds(1f);
+        }
     }
 }
