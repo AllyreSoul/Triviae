@@ -1,0 +1,26 @@
+{
+    "theme":"Kampus",
+    "themeid":"0",
+    "title":"Lokasi Ruang Kepsek ada di...",
+    "correct":1,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Lantai 2",
+                "id":1
+            },
+            {
+                "text":"Lantai 3",
+                "id":2
+            },
+            {
+                "text":"Lobby",
+                "id":3
+            },
+            {
+                "text":"Depan Kooperasi",
+                "id":4
+            }
+        ]
+}

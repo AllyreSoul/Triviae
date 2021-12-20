@@ -1,0 +1,26 @@
+{
+    "theme":"Kampus",
+    "themeid":"0",
+    "title":"Sekolah ST. Theresia berdiri di...",
+    "correct":1,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Jakarta Pusat",
+                "id":1
+            },
+            {
+                "text":"Jakarta Barat",
+                "id":2
+            },
+            {
+                "text":"Jakarta Timur",
+                "id":3
+            },
+            {
+                "text":"Jakarta Selatan",
+                "id":4
+            }
+        ]
+}

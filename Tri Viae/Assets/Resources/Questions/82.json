@@ -1,0 +1,26 @@
+{
+    "theme":"Film",
+    "themeid":"0",
+    "title":"Snack kesukaan Alvin and the Chipmunk adalah?",
+    "correct":3,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Pretzel",
+                "id":1
+            },
+            {
+                "text":"Ice Cream",
+                "id":2
+            },
+            {
+                "text":"Toaster Waffle",
+                "id":3
+            },
+            {
+                "text":"Indomie",
+                "id":4
+            }
+        ]
+}

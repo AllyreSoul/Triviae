@@ -1,0 +1,26 @@
+{
+    "theme":"Natal",
+    "themeid":"0",
+    "title":"Hiasan apa yang biasanya para elf miliki di sepatu mereka?",
+    "correct":1,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Lonceng",
+                "id":1
+            },
+            {
+                "text":"Kaus Kaki",
+                "id":2
+            },
+            {
+                "text":"Bola Warna - Warni",
+                "id":3
+            },
+            {
+                "text":"Mainan Salju",
+                "id":4
+            }
+        ]
+}

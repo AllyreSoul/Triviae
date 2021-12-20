@@ -1,0 +1,26 @@
+{
+    "theme":"Astronomi",
+    "themeid":"0",
+    "title":"Gugsan Bintang yang berarti naga adalah...",
+    "correct":1,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Draco",
+                "id":1
+            },
+            {
+                "text":"Feles",
+                "id":2
+            },
+            {
+                "text":"Dracanea",
+                "id":3
+            },
+            {
+                "text":"Lyra",
+                "id":4
+            }
+        ]
+}

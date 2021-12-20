@@ -1,0 +1,26 @@
+{
+    "theme":"Kampus",
+    "themeid":"0",
+    "title":"Relatif terhadap posisi SMA Theresia, Gereja Theresia berada pada",
+    "correct":1,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Sebelah Sekolah",
+                "id":1
+            },
+            {
+                "text":"Depan Sekolah",
+                "id":2
+            },
+            {
+                "text":"Belakang Sekolah",
+                "id":3
+            },
+            {
+                "text":"Dalam Sekolah",
+                "id":4
+            }
+        ]
+}

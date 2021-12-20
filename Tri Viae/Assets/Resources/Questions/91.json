@@ -1,0 +1,26 @@
+{
+    "theme":"Umum",
+    "themeid":"0",
+    "title":"Siapa yang menciptakan pasteurisasi?",
+    "correct":1,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Louis Pasteur",
+                "id":1
+            },
+            {
+                "text":"Marie Curie",
+                "id":2
+            },
+            {
+                "text":"Alfred Novel",
+                "id":3
+            },
+            {
+                "text":"Rosalind Franklin",
+                "id":4
+            }
+        ]
+}

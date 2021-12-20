@@ -1,0 +1,26 @@
+{
+    "theme":"7 Habits",
+    "themeid":"0",
+    "title":"Habit ke 7 adalah...",
+    "correct":1,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Sharpen the Saw",
+                "id":1
+            },
+            {
+                "text":"Be Proactive",
+                "id":2
+            },
+            {
+                "text":"Think Win-Win",
+                "id":3
+            },
+            {
+                "text":"Syergize",
+                "id":4
+            }
+        ]
+}

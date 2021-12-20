@@ -1,0 +1,26 @@
+{
+    "theme":"Kampus",
+    "themeid":"0",
+    "title":"Ada berapa guru BK di SMA Theresia?",
+    "correct":1,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"3",
+                "id":1
+            },
+            {
+                "text":"4",
+                "id":2
+            },
+            {
+                "text":"2",
+                "id":3
+            },
+            {
+                "text":"1",
+                "id":4
+            }
+        ]
+}

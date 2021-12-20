@@ -1,0 +1,26 @@
+{
+    "theme":"Geologi",
+    "themeid":"0",
+    "title":"Ibu Kota Polandia adalah...",
+    "correct":1,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Warsaw",
+                "id":1
+            },
+            {
+                "text":"Vilnius",
+                "id":2
+            },
+            {
+                "text":"Minsk",
+                "id":3
+            },
+            {
+                "text":"Moscow",
+                "id":4
+            }
+        ]
+}

@@ -1,0 +1,26 @@
+{
+    "theme":"Astronomi",
+    "themeid":"0",
+    "title":"Planet Terpanas di tata surya adalah...",
+    "correct":2,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Merkurius",
+                "id":1
+            },
+            {
+                "text":"Venus",
+                "id":2
+            },
+            {
+                "text":"Mars",
+                "id":3
+            },
+            {
+                "text":"Bumi",
+                "id":4
+            }
+        ]
+}

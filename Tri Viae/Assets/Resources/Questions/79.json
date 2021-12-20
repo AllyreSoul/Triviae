@@ -1,0 +1,26 @@
+{
+    "theme":"Makanan",
+    "themeid":"0",
+    "title":"Dari mana bika Ambon berasal?",
+    "correct":3,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Ambon",
+                "id":1
+            },
+            {
+                "text":"Aceh",
+                "id":2
+            },
+            {
+                "text":"Medan",
+                "id":3
+            },
+            {
+                "text":"Jakarta",
+                "id":4
+            }
+        ]
+}

@@ -1,0 +1,26 @@
+{
+    "theme":"Makanan",
+    "themeid":"0",
+    "title":"Contoh makanan dari Amerika adalah….",
+    "correct":1,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Burger",
+                "id":1
+            },
+            {
+                "text":"Churros",
+                "id":2
+            },
+            {
+                "text":"Pizza",
+                "id":3
+            },
+            {
+                "text":"Fried rice",
+                "id":4
+            }
+        ]
+}

@@ -1,0 +1,26 @@
+{
+    "theme":"Kampus",
+    "themeid":"0",
+    "title":"Berikut ini adalah lirik dari  lagu “Mars Serviam”. Lengkapilah lirik tersebut! Kami sadari panggilan Tuhan…",
+    "correct":1,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Hidup suci menjadi teladan",
+                "id":1
+            },
+            {
+                "text":"Segar bugar pun muda belia",
+                "id":2
+            },
+            {
+                "text":"Ke arah luhur kami menuju",
+                "id":3
+            },
+            {
+                "text":"Maria Bunda pembimbing kami",
+                "id":4
+            }
+        ]
+}

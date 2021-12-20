@@ -1,0 +1,26 @@
+{
+    "theme":"Natal",
+    "themeid":"0",
+    "title":"Siapa nama rusa yang memiliki hidung merah?",
+    "correct":1,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Rudolf",
+                "id":1
+            },
+            {
+                "text":"Dasher",
+                "id":2
+            },
+            {
+                "text":"Max",
+                "id":3
+            },
+            {
+                "text":"Prancer",
+                "id":4
+            }
+        ]
+}

@@ -1,0 +1,26 @@
+{
+    "theme":"Geografi",
+    "themeid":"0",
+    "title":"Koloseum terletak pada?",
+    "correct":3,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Amerika",
+                "id":1
+            },
+            {
+                "text":"Yerusalem",
+                "id":2
+            },
+            {
+                "text":"Roma",
+                "id":3
+            },
+            {
+                "text":"Filipina",
+                "id":4
+            }
+        ]
+}

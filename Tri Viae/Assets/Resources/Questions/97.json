@@ -1,0 +1,26 @@
+{
+    "theme":"Makanan",
+    "themeid":"0",
+    "title":"Negara apa yang pertama kali menciptakan pizza",
+    "correct":1,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Italia",
+                "id":1
+            },
+            {
+                "text":"Perancis",
+                "id":2
+            },
+            {
+                "text":"Amerika Serikat",
+                "id":3
+            },
+            {
+                "text":"Uganda",
+                "id":4
+            }
+        ]
+}

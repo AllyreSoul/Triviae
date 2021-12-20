@@ -1,0 +1,26 @@
+{
+    "theme":"Natal",
+    "themeid":"0",
+    "title":"Pohon apa yang menjadi pohon natal?",
+    "correct":2,
+    "fourPick":true,
+    "answers":
+        [
+            {
+                "text":"Pohon Beringin",
+                "id":1
+            },
+            {
+                "text":"Pohon Cemara",
+                "id":2
+            },
+            {
+                "text":"Pohon Kelapa",
+                "id":3
+            },
+            {
+                "text":"Pohon Mangga",
+                "id":4
+            }
+        ]
+}
