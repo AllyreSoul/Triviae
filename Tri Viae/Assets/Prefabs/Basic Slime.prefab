@@ -247,6 +247,8 @@ MonoBehaviour:
   self: {fileID: 4977064732452717544}
   point: {fileID: 4977064733039624385}
   pointObject: {fileID: 1905046812430614040, guid: a2869d9063df67a449a6c84a9925a0f4, type: 3}
+  buffObject: {fileID: 3183043792896461665, guid: 64f1d001095c8df42abad0e0f6af4ed9, type: 3}
+  healObject: {fileID: 2939561318700648127, guid: 83e5d2b7bebe63a4c9dd06458d9a6646, type: 3}
   seeker: {fileID: 4977064732452717554}
   maxHP: 100
   hp: 100

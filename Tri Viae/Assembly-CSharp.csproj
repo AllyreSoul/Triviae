@@ -47,6 +47,8 @@
      <Compile Include="Assets\Scripts\TriggerTest.cs" />
      <Compile Include="Assets\Scripts\PlayerGun.cs" />
      <Compile Include="Assets\Scripts\ButtonStep.cs" />
+     <Compile Include="Assets\Scripts\UIBuff.cs" />
+     <Compile Include="Assets\Scripts\BuffObject.cs" />
      <Compile Include="Assets\Scripts\Ais\ArmoredAI.cs" />
      <Compile Include="Assets\Scripts\Status.cs" />
      <Compile Include="Assets\Scripts\NegativeLight.cs" />
@@ -63,10 +65,13 @@
      <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\Portal.cs" />
      <Compile Include="Assets\Scripts\Data.cs" />
+     <Compile Include="Assets\Scripts\UIBuffLocal.cs" />
      <Compile Include="Assets\Scripts\TextWriterQArray.cs" />
      <Compile Include="Assets\Scripts\PlayerCombat.cs" />
      <Compile Include="Assets\Scripts\RealScore.cs" />
      <Compile Include="Assets\Scripts\GameHandlerDifficulty.cs" />
+     <Compile Include="Assets\Scripts\HealthPickup.cs" />
+     <Compile Include="Assets\Scripts\HealPickup.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
