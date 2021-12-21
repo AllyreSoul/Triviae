@@ -9,6 +9,7 @@ public class HealthPickup : MonoBehaviour
         healAnchor = GameObject.Find("HealAnchor");
     }
         private void OnTriggerStay2D(Collider2D other) {
+            SoundHandler.SoundHandlerPlay("Buff");
             PlayerCombat player = other.gameObject.GetComponent<PlayerCombat>();
             GameObject n = Instantiate(healPickup, healAnchor.transform);
             HealPickup nInternal = n.GetComponent<HealPickup>();

@@ -27,5 +27,8 @@ public class PlayerMovement : MonoBehaviour
             {
                 entity.flipX = true;
             }
+        if(rb.velocity.x != 0||rb.velocity.y != 0){
+            SoundHandler.SoundHandlerPlay("Walk");
+        }
     }
 }

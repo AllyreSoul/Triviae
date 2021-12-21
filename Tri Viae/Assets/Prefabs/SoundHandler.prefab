@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1949670528054059609
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1949670528054059615}
+  - component: {fileID: 1949670528054059614}
+  m_Layer: 0
+  m_Name: SoundHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1949670528054059615
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949670528054059609}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 686.9595, y: 483.61252, z: -37.711666}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1949670528054059614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949670528054059609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f391495125d1f14fa5e53daa1c3a1c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sounds:
+  - name: Menu
+    clip: {fileID: 8300000, guid: e365f392de59d7140854916070f8a8f1, type: 3}
+    source: {fileID: 0}
+  - name: Journey
+    clip: {fileID: 8300000, guid: 6ae12d7a9caf9db4da288237eb7912fe, type: 3}
+    source: {fileID: 0}
+  - name: Correct
+    clip: {fileID: 8300000, guid: decae974495a7d042a296edb519e635d, type: 3}
+    source: {fileID: 0}
+  - name: Incorrect
+    clip: {fileID: 8300000, guid: 13cff4d4ec6818f48ba8eb369e050430, type: 3}
+    source: {fileID: 0}
+  - name: Select
+    clip: {fileID: 8300000, guid: 314faa953d77c40449ca4938697cd2d3, type: 3}
+    source: {fileID: 0}
+  - name: Selected
+    clip: {fileID: 8300000, guid: 29738f2cdbcca434eacd259612b6f04f, type: 3}
+    source: {fileID: 0}
+  - name: Shoot
+    clip: {fileID: 8300000, guid: 5a51eec16d253ec4dad10904304e1f24, type: 3}
+    source: {fileID: 0}
+  - name: Walk
+    clip: {fileID: 8300000, guid: 07d810c99b245174693f88357abd61f3, type: 3}
+    source: {fileID: 0}
+  - name: Buff
+    clip: {fileID: 8300000, guid: 7aa8ea5b3b50b1e4bae43ff22d475e3a, type: 3}
+    source: {fileID: 0}

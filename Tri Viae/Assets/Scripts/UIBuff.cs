@@ -15,6 +15,7 @@ public class UIBuff : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     }
     public void OnPointerEnter(PointerEventData data)
         {
+            SoundHandler.SoundHandlerPlay("Select", true);
             UIObject = Instantiate(BuffUI, Anchor);
             UIBuffLocal UIInternal = UIObject.GetComponent<UIBuffLocal>();
             UIInternal.sel = sel;
