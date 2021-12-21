@@ -21,7 +21,7 @@ public class GameHandler : MonoBehaviour
     public GameObject indicatorObject;
     public randomizedList[] randomizedLists;
     public Indicator indicator;
-    public GameObject questionArray;
+    public GameObject questionArray, buffAnchor, buffObject;
     public RealScore realScore;
     public Transform[] EnemyAnchors;
     public int[] DiceRoll;
@@ -52,7 +52,6 @@ public class GameHandler : MonoBehaviour
         randomizedLists[2].internalIndex = 0;
         for(int i = 0; i <= length - 1; i++){
             list[i] = i + 1;
-            Debug.Log(i + 1);
         }
         var random = new System.Random();
         random.Shuffle<int>(list);
@@ -74,7 +73,7 @@ public class GameHandler : MonoBehaviour
             }
         }
         Data.correct = new bool[trueLength];
-        Data.questions = new question[trueLength];
+        Data.questions = new List<question>();
         Data.length = trueLength;
         realScore.length = trueLength;
         realScore.UpdateProgress(0);
@@ -113,12 +112,10 @@ public class GameHandler : MonoBehaviour
                 qArray.buttonSteps[i]._onQuestionsAssigned();
             }
         }
-        Data.questions[randomizedLists[0].internalIndex] = assignedQuestion;
-        Debug.Log(Data.questions[randomizedLists[0].internalIndex].title);
+        Data.questions.Add(assignedQuestion);
     }
     question readJSON(string fileName){
         var file = Resources.Load<TextAsset>($"Questions/{fileName}");
-        Debug.Log(fileName);
         question question = JsonUtility.FromJson<question>(file.text);
         return question;
     }
@@ -128,6 +125,7 @@ public class GameHandler : MonoBehaviour
         {
             Data.correct[randomizedLists[0].internalIndex] = true;
             Data.score++;
+            CorrectAnswer();
             InitializeNextQuestions();
         } else 
         {
@@ -144,7 +142,6 @@ public class GameHandler : MonoBehaviour
         }
         gate.gameObject.SetActive(false);
         createIndicator();
-        Debug.Log(randomizedLists[1].internalIndex);
         if(trueLength <= randomizedLists[1].internalIndex + 1){
             GameObject.Destroy(indicator.gameObject);
             GameObject.Destroy(questionArray);
@@ -164,11 +161,9 @@ public class GameHandler : MonoBehaviour
             for(int i = 0; i <= 2; i++){
                 int path = randomizedLists[i].id[randomizedLists[i].internalIndex];
                 questions[i] = readJSON(path.ToString());
-                Debug.Log(questions[i].theme + " " + path);
                 indicator.onAnswered(questions[i].theme, i);
             } 
         if(randomizedLists[0].internalIndex <= 15){
-            Debug.Log("True Length: " + trueLength + "Current Index: " + randomizedLists[1].internalIndex + "\nCurrent IDs:" + randomizedLists[0].id?[randomizedLists[0].internalIndex] + " " + randomizedLists[1].id?[randomizedLists[1].internalIndex]+" " + randomizedLists[2].id?[randomizedLists[2].internalIndex]);
         }
         
     }
@@ -188,11 +183,21 @@ public class GameHandler : MonoBehaviour
 
     IEnumerator CheckEnemies(){
         for(;;){
-            Debug.Log("test");
             if(GameObject.FindGameObjectsWithTag("Enemy").Length <= 0){
                 InitializeNextQuestions();
             }
             yield return new WaitForSeconds(1f);
         }
     }
+
+    private void CorrectAnswer(){
+        Buff assignedBuff = Index.GenerateBuff();
+        GenerateBuff(assignedBuff);
+    }
+    public void GenerateBuff(Buff c){
+        GameObject BuffObj = Instantiate(buffObject, player);
+        BuffObject b = BuffObj.GetComponent<BuffObject>();
+        b.buff = c;
+    }
+
 }

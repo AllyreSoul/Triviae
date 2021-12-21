@@ -19,13 +19,17 @@ public class PlayerCombat : MonoBehaviour
         Def = 1;
     }
     public void TakeDamage(float Damage){
-        Hp -= (int)Damage - Def;
+        int trueDamage = (int)Damage - (int)Def;
+        if(trueDamage <= 0){
+            trueDamage = 1;
+        }
+        Hp -= trueDamage;
         if(Hp <= 0){
             GameOver();    
         }
         UpdateUI();
     }
-    private void UpdateUI(){
+    public void UpdateUI(){
         slider.value = Hp/MaxHP;
         HealthText.SetText(Hp + "/" + MaxHP);
     }

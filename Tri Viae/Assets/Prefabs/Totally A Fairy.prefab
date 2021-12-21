@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2428270271941947731}
   - component: {fileID: 3279494092760556276}
   - component: {fileID: 4959805786953590085}
+  - component: {fileID: 6304075158108144558}
   m_Layer: 0
   m_Name: Totally A Fairy
   m_TagString: Untagged
@@ -91,3 +92,24 @@ MonoBehaviour:
     R: 0
     G: 0
     B: 0
+  fairyLerp: {fileID: 6304075158108144558}
+--- !u!114 &6304075158108144558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628998158348289746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33899f2337d978c4483526fa6570f646, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: {fileID: 1905046812430614040, guid: a2869d9063df67a449a6c84a9925a0f4, type: 3}
+  self: {fileID: 2428270271941947731}
+  end: {fileID: 0}
+  origin: {fileID: 0}
+  time: 0
+  startTime: 0
+  speed: 0
+  journeyLength: 0

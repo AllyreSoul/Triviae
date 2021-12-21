@@ -12,7 +12,7 @@ public class SlimeAI : MonoBehaviour, Enemy
         Shoot
     }
     public Transform player, self, point;
-    public GameObject pointObject;
+    public GameObject pointObject, buffObject, healObject;
     public Seeker seeker;
     private State state;
     private float Atk = 5f;
@@ -57,7 +57,7 @@ public class SlimeAI : MonoBehaviour, Enemy
         hp = hp - dmg;
         if(hp <= 0){
             Data.kills++;
-            GameObject.Destroy(this.gameObject);
+            Die();
         }
         UpdateUI();
     }
@@ -73,5 +73,23 @@ public class SlimeAI : MonoBehaviour, Enemy
     }
     private void UpdateUI(){
         slider.value = hp/maxHP;
+    }
+
+    private void Die(){
+        float rand = Random.Range(0f, 1f);
+        Debug.Log(rand);
+        if(rand > 0.7f){
+            Buff drop = Index.GenerateBuff();
+            GenerateBuff(drop);
+        } else if (rand >= 0.4f){
+            Instantiate(healObject, self.transform.position, Quaternion.identity);
+        }
+        GameObject.Destroy(this.gameObject);
+    }
+    public void GenerateBuff(Buff c){
+        GameObject BuffObj = Instantiate(buffObject, self.transform.position, Quaternion.identity);
+        BuffObject b = BuffObj.GetComponent<BuffObject>();
+        b.buff = c;
+        Debug.Log("buffGenerated");
     }
 }

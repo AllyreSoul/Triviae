@@ -7,6 +7,7 @@ public class FairyInternal : MonoBehaviour
     public float mod, Delay;
     public RGBVal rgb;
     Light2D light;
+    public FairyLerp fairyLerp;
     bool executed = false;
     // Start is called before the first frame update
     void Start()
@@ -48,6 +49,7 @@ public class FairyInternal : MonoBehaviour
     }
 
     void Suicide(){
+        fairyLerp.Suicide();
         GameObject.Destroy(this.gameObject);
     }
 }

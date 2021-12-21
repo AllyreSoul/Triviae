@@ -15,6 +15,25 @@ public static class Index{
             array[k] = temp;
         }
     }
+    public static Buff GenerateBuff(){
+        int rand = UnityEngine.Random.Range(0, 3);
+        Buff end = new Buff();
+        switch(rand){
+            case 0:
+                end.type = Sel.Atk;
+                end.amount = (int)UnityEngine.Random.Range(1, 3);
+                break;
+            case 1:
+                end.type = Sel.Def;
+                end.amount = (int)UnityEngine.Random.Range(1, 3);
+                break;
+            case 2:
+                end.type = Sel.HP;
+                end.amount = (int)UnityEngine.Random.Range(1, 2) * 10;
+                break;
+        }
+        return end;
+    }
 }
 [System.Serializable]
 public class question
@@ -42,4 +61,15 @@ public struct randomizedList{
 
 public interface Enemy{
     void TakeDamage(float dmg);
+}
+[System.Serializable] public enum Sel{
+    Atk,
+    Def,
+    HP
+}
+
+[System.Serializable] 
+public class Buff{
+    public Sel type;
+    public float amount;
 }
