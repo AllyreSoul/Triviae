@@ -7,25 +7,19 @@ using UnityEngine.SceneManagement;
 
 public class GameHandler : MonoBehaviour
 {
-    public Transform spawn;
-    public Transform player;
-    public Transform Anchor;
-    public GameObject fourPickArray;
-    public GameObject twoPickArray;
+    public Transform spawn, player, Anchor;
+    public GameObject fourPickArray, twoPickArray, gate, indicatorObject, questionArray, buffAnchor, buffObject;
+    public QuestionArray qArray;
     public question assignedQuestion;
     public question[] questions;
-    public int length;
-    public int trueLength;
-    public QuestionArray qArray;
-    public GameObject gate;
-    public GameObject indicatorObject;
+    public int length, trueLength;
     public randomizedList[] randomizedLists;
     public Indicator indicator;
-    public GameObject questionArray, buffAnchor, buffObject;
     public RealScore realScore;
     public Transform[] EnemyAnchors;
     public int[] DiceRoll;
     public GameObject[] Enemies;
+    public GameHandlerDifficulty gameHandlerDifficulty;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +28,7 @@ public class GameHandler : MonoBehaviour
     }
 
     void initialize(){
+        ReInitializeData();
         DiceRoll= new int[7];
         for(int i = 0; i <= 6; i++){
             DiceRoll[i] = i;
@@ -79,6 +74,7 @@ public class GameHandler : MonoBehaviour
         realScore.UpdateProgress(0);
         createIndicator();
         readNextQuestions();
+        SoundHandler.SoundHandlerPlay("Journey", false, true);
     }
     public void Reload(int id){
         GameObject.Destroy(indicator.gameObject);
@@ -125,12 +121,19 @@ public class GameHandler : MonoBehaviour
         {
             Data.correct[randomizedLists[0].internalIndex] = true;
             Data.score++;
+            SoundHandler.SoundHandlerPlay("Correct");
             CorrectAnswer();
             InitializeNextQuestions();
         } else 
         {
             Data.correct[randomizedLists[0].internalIndex] = false;
-            InitializeEnemies(1);
+            SoundHandler.SoundHandlerPlay("Incorrect");
+            gameHandlerDifficulty.difficulty += 0.125f;
+            List<enemyData> assignedEnemies = new List<enemyData>();
+            assignedEnemies = gameHandlerDifficulty.generateEnemyData();
+            foreach(enemyData i in assignedEnemies){
+                InitializeEnemies(i);
+            }
             StartCoroutine(CheckEnemies());
         }
     }
@@ -173,11 +176,11 @@ public class GameHandler : MonoBehaviour
         indication.transform.parent = Anchor;
         indicator = indication.GetComponent<Indicator>();
     }
-    private void InitializeEnemies(int num){
+    private void InitializeEnemies(enemyData data){
         GameObject.Destroy(questionArray);
         Index.Shuffle<int>(new System.Random(), DiceRoll);
-        for(int i = 0; i <= num - 1; i++){
-            Instantiate(Enemies[0], new Vector3(EnemyAnchors[DiceRoll[i]].position.x, EnemyAnchors[DiceRoll[i]].position.y, -0.2f), Quaternion.identity);
+        for(int i = 0; i <= data.amount - 1; i++){
+            Instantiate(Enemies[data.id], new Vector3(EnemyAnchors[DiceRoll[i]].position.x, EnemyAnchors[DiceRoll[i]].position.y, -0.2f), Quaternion.identity);
         }
     }
 
@@ -191,13 +194,22 @@ public class GameHandler : MonoBehaviour
     }
 
     private void CorrectAnswer(){
-        Buff assignedBuff = Index.GenerateBuff();
-        GenerateBuff(assignedBuff);
+        float Rand = UnityEngine.Random.Range(0, 2f);
+        if(Rand > 0.65)
+        {
+            Buff assignedBuff = Index.GenerateBuff();
+            GenerateBuff(assignedBuff);
+            }
     }
     public void GenerateBuff(Buff c){
         GameObject BuffObj = Instantiate(buffObject, player);
         BuffObject b = BuffObj.GetComponent<BuffObject>();
         b.buff = c;
+    }
+    public void ReInitializeData(){
+        Data.completed = false;
+        Data.score = 0;
+        Data.kills = 0;
     }
 
 }

@@ -9,4 +9,5 @@ public static class Data
     public static bool[] correct;
     public static bool completed = false;
     public static int kills;
+    public static PlayerData playerData;
 }

@@ -30,6 +30,7 @@ public class PlayerGun : MonoBehaviour
         if(CanShoot)
         {
             StopCoroutine(Cooldown());
+            SoundHandler.SoundHandlerPlay("Shoot", true);
             GameObject pew = Instantiate(bullet, self.position, self.rotation);
             Rigidbody2D rb = pew.GetComponent<Rigidbody2D>();
             rb.AddForce(self.up * bulletForce, ForceMode2D.Impulse);
@@ -39,7 +40,7 @@ public class PlayerGun : MonoBehaviour
     }
     IEnumerator Cooldown(){
         CanShoot = false;
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.25f);
         CanShoot = true;
     }
 }

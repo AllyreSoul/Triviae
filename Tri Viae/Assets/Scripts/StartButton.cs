@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-public class StartButton : MonoBehaviour
+using UnityEngine.EventSystems;
+public class StartButton : MonoBehaviour, IPointerEnterHandler
 {
     public Button button;
     public string NewScene;
@@ -12,9 +13,14 @@ public class StartButton : MonoBehaviour
         button.onClick.AddListener(onClicked);
     }
     void onClicked(){
-        Invoke("MoveScene", 2f);
+        SoundHandler.SoundHandlerPlay("Selected");
+        Time.timeScale = 1;
+        MoveScene();
     }
     void MoveScene(){
         SceneManager.LoadScene(NewScene);
+    }
+    public void OnPointerEnter(PointerEventData data){
+        SoundHandler.SoundHandlerPlay("Select", true);
     }
 }

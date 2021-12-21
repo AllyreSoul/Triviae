@@ -23,6 +23,7 @@ public class BuffObject : MonoBehaviour
         }
     }
     private void OnTriggerStay2D(Collider2D other) {
+            SoundHandler.SoundHandlerPlay("Buff");
             PlayerCombat player = other.gameObject.GetComponent<PlayerCombat>();
             Debug.Log("buff amount =" + buff.amount);
             Debug.Log(player.Atk);
@@ -39,6 +40,7 @@ public class BuffObject : MonoBehaviour
                     break;
             }
             player.UpdateUI();
+            player.SyncData();
             GameObject n = Instantiate(LocalNotif, Anchor.transform);
             UIBuffLocal nInternal = n.GetComponent<UIBuffLocal>();
             nInternal.sel = buff.type;

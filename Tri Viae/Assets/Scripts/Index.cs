@@ -29,7 +29,7 @@ public static class Index{
                 break;
             case 2:
                 end.type = Sel.HP;
-                end.amount = (int)UnityEngine.Random.Range(1, 2) * 10;
+                end.amount = (int)UnityEngine.Random.Range(1, 4) * 10;
                 break;
         }
         return end;
@@ -72,4 +72,15 @@ public interface Enemy{
 public class Buff{
     public Sel type;
     public float amount;
+}
+
+[System.Serializable]
+public class enemyData{
+    public int id = 0;
+    public int amount = 0;
+}
+
+[System.Serializable]
+public class PlayerData{
+    public float MaxHP, Hp, Atk, Def;
 }

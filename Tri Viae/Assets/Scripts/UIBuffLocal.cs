@@ -27,9 +27,4 @@ public class UIBuffLocal : MonoBehaviour
         text.text = stringText;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
