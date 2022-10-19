@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class GameHandler : MonoBehaviour
 {
     public Transform spawn, player, Anchor;
-    public GameObject fourPickArray, twoPickArray, gate, indicatorObject, questionArray, buffAnchor, buffObject;
+    public GameObject fourPickArray, twoPickArray, gate, indicatorObject, questionArray, buffObject;
     public QuestionArray qArray;
     public question assignedQuestion;
     public question[] questions;

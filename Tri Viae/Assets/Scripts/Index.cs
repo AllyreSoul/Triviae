@@ -4,15 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public static class Index{
-    public static void Shuffle<T> (this System.Random rng, T[] array)
+    public static void Shuffle<T> (this System.Random random, T[] array)
     {
-        int n = array.Length;
-        while (n > 1) 
+        int length = array.Length;
+        while (length > 1) 
         {
-            int k = rng.Next(n--);
-            T temp = array[n];
-            array[n] = array[k];
-            array[k] = temp;
+            int rand = random.Next(length--);
+            T temp = array[length];
+            array[length] = array[rand];
+            array[rand] = temp;
         }
     }
     public static Buff GenerateBuff(){
